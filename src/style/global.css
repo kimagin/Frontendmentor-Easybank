@@ -1,3 +1,7 @@
 body {
   @apply font-sans font-base text-project;
 }
+
+h1 {
+  @apply text-5xl text-dark-blue;
+}
