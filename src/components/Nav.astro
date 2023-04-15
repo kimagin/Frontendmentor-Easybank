@@ -4,18 +4,20 @@ import CTA from './CTA.astro'
 const navigationItems = ['Home', 'About', 'Contact', 'Blog', 'Careers']
 ---
 
-<nav class="absolute w-full z-10 top-0 left-0 right-0 bg-white mx-auto py-4">
+<nav class="absolute w-full top-0 left-0 right-0 bg-white mx-auto z-30">
   <div class="wrapper px-6 flex items-center justify-between max-w-6xl mx-auto">
     <Logo />
     <div class="links text-sm font-base text-grayish-blue">
       <ul class="flex gap-6">
         {
           navigationItems.map((item) => (
-            <li class="group ">
+            <li class="group flex flex-col h-20 justify-between hover:cursor-pointer ">
+              <span class="h-2 " />
               <a href="#">{item}</a>
+
               <div
-                class="border-b-2 scale-x-0  group-hover:scale-x-100 
-              group-hover:cursor-pointer 
+                class=" bg-gradient-to-r from-lime-green to-bright-cyan w-full  h-1 scale-x-0 group-hover:scale-x-100 
+              
               origin-left
               transition-transform duration-300 ease-in-out"
               />

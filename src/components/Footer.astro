@@ -1,1 +1,62 @@
-<footer>footer</footer>
+---
+import CTA from './CTA.astro'
+import Logo from './Logo.astro'
+const socials = ['facebook', 'youtube', 'twitter', 'pinterest', 'instagram']
+const links = [
+  'About Us',
+  'Careers',
+  'Contact',
+  'Support',
+  'Blog',
+  'Privacy Policy',
+]
+---
+
+<div class="bg-dark-blue py-12">
+  <div class="mx-auto max-w-6xl px-6 h-24 flex justify-between">
+    <div class="flex flex-col justify-between w-fit">
+      <Logo light={true} />
+      <ul class="flex gap-3">
+        {
+          socials.map((item) => (
+            <li>
+              <a
+                href="#"
+                class="opacity-90 hover:opacity-100">
+                <img
+                  src={`./images/icon-${item}.svg`}
+                  alt={item}
+                />
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+    <span class="flex-1"></span>
+    <div class="links">
+      <ul class="grid grid-cols-2 gap-x-20 h-full">
+        {
+          links.map((item) => (
+            <li class="">
+              <a
+                class="text-sm text-light-grayish-blue/80
+                hover:text-light-grayish-blue
+                "
+                href="#">
+                {item}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+    <span class="flex-1"></span>
+    <div class="right">
+      <div class="flex flex-col h-full justify-between items-end">
+        <CTA name="Request Invite" />
+        <p class="text-[0.9rem]">© Easybank. All Rights Reserved</p>
+      </div>
+    </div>
+  </div>
+</div>
