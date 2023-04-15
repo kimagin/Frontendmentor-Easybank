@@ -1,0 +1,14 @@
+---
+export interface Props {
+  light?: boolean
+}
+
+const { light = false } = Astro.props
+---
+
+<div class="logo">
+  <img
+    src={light ? './images/logo-light.svg' : './images/logo-dark.svg'}
+    alt=""
+  />
+</div>

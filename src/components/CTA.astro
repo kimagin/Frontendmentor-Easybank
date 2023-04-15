@@ -1,0 +1,12 @@
+---
+export interface Props {
+  name?: string
+}
+const { name = 'Generic Button' } = Astro.props
+---
+
+<a
+  class="bg-gradient-to-r from-lime-green to-bright-cyan text-white text-sm px-9 py-3 rounded-full"
+  href=""
+  >{name}</a
+>

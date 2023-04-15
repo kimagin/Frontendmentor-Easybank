@@ -1,1 +1,27 @@
-<nav>Nav</nav>
+---
+import Logo from './Logo.astro'
+import CTA from './CTA.astro'
+const navigationItems = ['Home', 'About', 'Contact', 'Blog', 'Careers']
+---
+
+<nav class="bg-white flex items-center justify-between mx-auto max-w-6xl p-6">
+  <Logo />
+  <div class="links text-sm font-base text-grayish-blue">
+    <ul class="flex gap-6">
+      {
+        navigationItems.map((item) => (
+          <li class="group ">
+            <a href="#">{item}</a>
+            <div
+              class="border-b-2 scale-x-0  group-hover:scale-x-100 
+              group-hover:cursor-pointer 
+            origin-left
+            transition-transform duration-300 ease-in-out"
+            />
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+  <CTA name="Request Invite" />
+</nav>
