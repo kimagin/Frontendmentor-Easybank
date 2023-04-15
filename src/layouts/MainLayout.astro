@@ -1,11 +1,15 @@
 ---
 import BaseHead from '../components/BaseHead.astro'
+import '../style/global.css'
 import Nav from '../components/Nav.astro'
 import Footer from '../components/Footer.astro'
 ---
 
 <html lang="en">
-  <BaseHead title="Front End" />
+  <BaseHead
+    title="Front End"
+    fav="./favicon-32x32.png"
+  />
   <body>
     <header>
       <!-- ::Navigation Component:: -->
@@ -13,6 +17,7 @@ import Footer from '../components/Footer.astro'
     </header>
 
     <!-- ::Page contents:: -->
+
     <slot />
 
     <!-- ::Footer Components:: -->

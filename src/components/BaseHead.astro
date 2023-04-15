@@ -1,8 +1,9 @@
 ---
 export interface Props {
   title: string
+  fav: string
 }
-const { title = 'Generic Page' } = Astro.props
+const { title = 'Generic Page', fav = '' } = Astro.props
 ---
 
 <head>
@@ -10,7 +11,7 @@ const { title = 'Generic Page' } = Astro.props
   <link
     rel="icon"
     type="image/svg+xml"
-    href="/favicon.svg"
+    href={fav}
   />
   <meta
     name="viewport"

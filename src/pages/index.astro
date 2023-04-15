@@ -1,7 +1,19 @@
 ---
+import Information from '../components/sections/Information.astro'
+import Articles from '../components/sections/Articles.astro'
+import Landing from '../components/sections/Landing.astro'
 import MainLayout from '../layouts/MainLayout.astro'
+import SectionLayout from '../layouts/SectionLayout.astro'
 ---
 
 <MainLayout>
-  <h1>Main Page</h1>
+  <SectionLayout name="landing">
+    <Landing />
+  </SectionLayout>
+  <SectionLayout name="landing">
+    <Information />
+  </SectionLayout>
+  <SectionLayout name="landing">
+    <Articles />
+  </SectionLayout>
 </MainLayout>
