@@ -2,24 +2,42 @@
 import CTA from '../CTA.astro'
 ---
 
-<div class="relative flex overflow-hidden py-24 bg-very-light-gray">
-  <div class="mx-auto w-full max-w-6xl px-6 h-[520px] flex justify-between">
-    <div class="flex flex-col justify-center">
-      <h1>Next generation<br /> digital banking</h1>
-      <p class="my-8 text-grayish-blue">
-        Take your financial life online. Your Easybank account<br /> will be a one-stop-shop
-        for spending, saving,<br /> budgeting, investing, and much more.
+<div class="absolute w-full h-[720px] overflow-hidden">
+  <img
+    class="hidden lg:block object-contain h-[140%] w-full top-[-170px] right-[-530px] absolute xxl:right-[-890px]"
+    src="./images/bg-intro-desktop.svg"
+    alt=""
+  />
+</div>
+<div class="h-[118px] relative lg:hidden">
+  <img
+    class="lg:hidden object-contain w-full bottom-[-410px] md:bottom-[-480px] right-0 absolute"
+    src="./images/bg-intro-mobile.svg"
+    alt=""
+  />
+</div>
+<div class="flex bg-very-light-gray">
+  <div
+    class="relative mx-auto w-full max-w-6xl px-6 h-[720px] flex flex-row flex-wrap-reverse">
+    <div
+      class="flex flex-col lg:max-w-md mt-6 lg:mt-48 mb-20 justify-center items-center lg:items-start text-center lg:text-left">
+      <h1>Next generation digital banking</h1>
+      <p class="my-8 mt-5 lg:my-8 text-grayish-blue px-6 lg:px-0">
+        Take your financial life online. Your Easybank account will be a
+        one-stop-shop for spending, saving, budgeting, investing, and much more.
       </p>
       <CTA name="Request Invite" />
     </div>
-    <div class="flex-1"></div>
-  </div>
-  <div
-    class="absolute top-[-154px] right-[-389px] background overflow-hidden z-10">
+    <div class="mx-auto lg:hidden">
+      <img
+        class=""
+        src="./images/image-mockups.png"
+        alt=""
+      />
+    </div>
     <img
-      class=""
-      width="1200px"
-      src="./images/bg-intro-desktop.svg"
+      class="absolute hidden lg:block right-[-280px] top-[-42px]"
+      src="./images/image-mockups.png"
       alt=""
     />
   </div>

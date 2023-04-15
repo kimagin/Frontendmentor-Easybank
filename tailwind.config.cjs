@@ -11,6 +11,9 @@ module.exports = {
       bold: 700,
     },
     extend: {
+      screens: {
+        xxl: '1900px',
+      },
       fontSize: {
         project: '18px',
       },

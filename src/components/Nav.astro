@@ -5,10 +5,11 @@ const navigationItems = ['Home', 'About', 'Contact', 'Blog', 'Careers']
 ---
 
 <nav class="absolute w-full top-0 left-0 right-0 bg-white mx-auto z-30">
-  <div class="wrapper px-6 flex items-center justify-between max-w-6xl mx-auto">
+  <div
+    class="wrapper py-6 md:py-0 px-6 flex items-center justify-between max-w-6xl mx-auto">
     <Logo />
     <div class="links text-sm font-base text-grayish-blue">
-      <ul class="flex gap-6">
+      <ul class="hidden md:flex gap-6">
         {
           navigationItems.map((item) => (
             <li class="group flex flex-col h-20 justify-between hover:cursor-pointer ">
@@ -26,6 +27,8 @@ const navigationItems = ['Home', 'About', 'Contact', 'Blog', 'Careers']
         }
       </ul>
     </div>
-    <CTA name="Request Invite" />
+    <div class="hidden md:flex">
+      <CTA name="Request Invite" />
+    </div>
   </div>
 </nav>

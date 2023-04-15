@@ -6,9 +6,11 @@ export interface Props {
 const { light = false } = Astro.props
 ---
 
-<div class="logo">
-  <img
-    src={light ? './images/logo-light.svg' : './images/logo-dark.svg'}
-    alt=""
-  />
+<div class="logo flex w-fit">
+  <a href="/">
+    <img
+      src={light ? './images/logo-light.svg' : './images/logo-dark.svg'}
+      alt=""
+    />
+  </a>
 </div>

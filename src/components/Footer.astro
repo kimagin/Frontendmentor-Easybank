@@ -12,11 +12,13 @@ const links = [
 ]
 ---
 
-<div class="bg-dark-blue py-12">
-  <div class="mx-auto max-w-6xl px-6 h-24 flex justify-between">
-    <div class="flex flex-col justify-between w-fit">
+<div class="bg-dark-blue py-10 pb-4 lg:py-12">
+  <div
+    class="mx-auto max-w-6xl px-6 lg:h-24 flex flex-col lg:flex-row justify-center items-center lg:items-stretch lg:justify-between">
+    <div
+      class="flex flex-col lg:justify-between justify-center items-center lg:items-start w-fit">
       <Logo light={true} />
-      <ul class="flex gap-3">
+      <ul class="flex my-8 lg:my-0 gap-4 lg:gap-3">
         {
           socials.map((item) => (
             <li>
@@ -24,6 +26,7 @@ const links = [
                 href="#"
                 class="opacity-90 hover:opacity-100">
                 <img
+                  class="w-6 lg:w-auto"
                   src={`./images/icon-${item}.svg`}
                   alt={item}
                 />
@@ -35,12 +38,15 @@ const links = [
     </div>
     <span class="flex-1"></span>
     <div class="links">
-      <ul class="grid grid-cols-2 gap-x-20 h-full">
+      <ul
+        class="lg:grid lg:grid-cols-2 space-y-2 lg:gap-x-20 lg:h-full flex flex-col justify-center items-center">
         {
           links.map((item) => (
-            <li class="">
+            <li class=" h-full">
               <a
-                class="text-sm text-light-grayish-blue/80
+                class="
+                text-[0.9rem]
+                lg:text-sm text-light-grayish-blue/80
                 hover:text-light-grayish-blue
                 "
                 href="#">
@@ -53,9 +59,12 @@ const links = [
     </div>
     <span class="flex-1"></span>
     <div class="right">
-      <div class="flex flex-col h-full justify-between items-end">
+      <div
+        class="flex flex-col h-full lg:justify-between items-center my-8 lg:my-0 lg:items-end">
         <CTA name="Request Invite" />
-        <p class="text-[0.9rem]">© Easybank. All Rights Reserved</p>
+        <p class="text-[0.9rem] mt-6 lg:mt-0">
+          © Easybank. All Rights Reserved
+        </p>
       </div>
     </div>
   </div>
