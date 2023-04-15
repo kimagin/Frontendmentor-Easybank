@@ -4,7 +4,27 @@ import CTA from './CTA.astro'
 const navigationItems = ['Home', 'About', 'Contact', 'Blog', 'Careers']
 ---
 
-<nav class="absolute w-full top-0 left-0 right-0 bg-white mx-auto z-30">
+<nav class="absolute w-full top-0 left-0 right-0 bg-white mx-auto z-10">
+  <!-- ::Hamburger Menu:: -->
+  <div
+    class="relative w-screen z-30 hidden md:hidden"
+    x-show="isMenuOpen"
+    x-ref="hamburger"
+    @click.outside="handelMobileMenu($refs.hamburger,$refs.background)">
+    <menu
+      class="absolute h-fit mx-auto top-24 left-10 right-10 bg-white flex justify-center rounded-md z-30">
+      <ul class="flex flex-col gap-6 p-8 items-center">
+        {
+          navigationItems.map((item) => (
+            <li class="w-fit text-xl text-dark-blue text-bold">
+              <a href="#">{item}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </menu>
+  </div>
+
   <div
     class="wrapper py-6 md:py-0 px-6 flex items-center justify-between max-w-6xl mx-auto">
     <Logo />
@@ -29,6 +49,16 @@ const navigationItems = ['Home', 'About', 'Contact', 'Blog', 'Careers']
     </div>
     <div class="hidden md:flex">
       <CTA name="Request Invite" />
+    </div>
+    <div class="md:hidden">
+      <button
+        @click.prevent="handelMobileMenu($refs.hamburger,$refs.background)"
+        class="hamburger">
+        <img
+          src="./images/icon-hamburger.svg"
+          alt=""
+        />
+      </button>
     </div>
   </div>
 </nav>

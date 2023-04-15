@@ -10,17 +10,31 @@ import Footer from '../components/Footer.astro'
     title="Front End"
     fav="./favicon-32x32.png"
   />
-  <body>
+  <body
+    x-data="data"
+    x-on:resize.window.throttle="window.innerWidth>=768? $el.classList.remove('stop'):''">
     <header>
       <!-- ::Navigation Component:: -->
       <Nav />
     </header>
-
+    <h1></h1>
     <!-- ::Page contents:: -->
 
     <slot />
 
     <!-- ::Footer Components:: -->
-    <Footer />
+    <footer>
+      <Footer />
+    </footer>
+    <!-- ::Modal:: -->
+    <div
+      class="menu-background md:hidden hidden absolute bg-gradient-to-b from-dark-blue/80 to-dark-blue/0 top-0 h-screen right-0 left-0"
+      x-ref="background">
+    </div>
+    <script>
+      import Alpine from 'alpinejs'
+      import Data from '../js/alpine.js'
+      Alpine.data('data', Data)
+    </script>
   </body>
 </html>

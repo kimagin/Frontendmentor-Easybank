@@ -18,6 +18,11 @@ body {
   @apply font-sans font-base text-project overflow-x-hidden;
 }
 
+body.stop {
+  height: 100%;
+  overflow: hidden;
+}
+
 h1 {
   @apply text-5xl text-dark-blue leading-[3.4rem];
 }
