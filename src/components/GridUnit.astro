@@ -1,0 +1,20 @@
+---
+export interface Props {
+  image: string
+  title: string
+  description: string
+}
+
+const { image, title, description } = Astro.props
+---
+
+<div class="">
+  <img
+    class="image my-8"
+    src={`./images/icon-${image}.svg`}
+  />
+  <h3 class="title mb-6">{title}</h3>
+  <p class="text text-[1.1rem] tracking-tight">
+    {description}
+  </p>
+</div>
