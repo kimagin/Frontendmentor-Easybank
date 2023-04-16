@@ -9,13 +9,14 @@ export interface Props {
 const { image, title, author, description } = Astro.props
 ---
 
-<div class="bg-white overflow-hidden rounded-md">
-  <div class="relative w-full h-56 md:h-48 overflow-hidden">
+<article class="bg-white overflow-hidden rounded-md">
+  <figure class="relative w-full h-56 md:h-48 overflow-hidden">
     <img
       class="object-cover w-full h-full min-h-max"
       src={`./images/image-${image}.jpg`}
+      alt={title}
     />
-  </div>
+  </figure>
 
   <div class="px-6 py-6">
     <p class="text-[0.6rem]">{author}</p>
@@ -24,4 +25,4 @@ const { image, title, author, description } = Astro.props
       {description}
     </p>
   </div>
-</div>
+</article>

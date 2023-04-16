@@ -13,6 +13,7 @@ const { image, title, description } = Astro.props
     width="74px"
     class="image my-8"
     src={`./images/icon-${image}.svg`}
+    alt={title}
   />
   <h3 class="title mb-6">{title}</h3>
   <p class="text text-[1.1rem] tracking-tight max-w-lg">
