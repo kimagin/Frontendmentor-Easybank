@@ -5,27 +5,27 @@ document.querySelectorAll('article').forEach((article) => {
 })
 
 if (window.innerWidth >= 768) {
-  //Mobilenet
+  //Desktop
   inView(
     'article',
     (info) => {
       animate(
         'article',
         { y: [80, 0], opacity: [0, 1] },
-        { delay: stagger(0.2), easing: spring({ damping: 50 }) }
+        { delay: stagger(0.3), easing: spring() }
       )
     },
-    { margin: '-1%', amount: 'all' }
+    { margin: '-30%' }
   )
 } else {
-  //Desktop
+  //Mobile
   inView(
     'article',
     (info) => {
       animate(
         info.target,
         { y: [80, 0], opacity: [0, 1] },
-        { delay: stagger(0.2), easing: spring({ damping: 50 }) }
+        { delay: stagger(0.3), easing: spring({ damping: 50 }) }
       )
     },
     { margin: '-30%' }
@@ -45,18 +45,20 @@ animate(
 
 export default function Data() {
   return {
-    init() {},
+    init() {
+      this.$watch('isMenuOpen', (e) => {
+        if (e) {
+          document.body.classList.add('stop')
+        } else {
+          document.body.classList.remove('stop')
+        }
+      })
+    },
     app: 'Astroweb',
     isMenuOpen: false,
     handelMobileMenu(menu, background) {
-      menu.classList.toggle('hidden')
-      background.classList.toggle('hidden')
-
-      if (document.body.classList.contains('stop')) {
-        document.body.classList.remove('stop')
-      } else {
-        document.body.classList.add('stop')
-      }
+      // menu.classList.toggle('hidden')
+      // background.classList.toggle('hidden')
 
       this.isMenuOpen = !this.isMenuOpen
     },

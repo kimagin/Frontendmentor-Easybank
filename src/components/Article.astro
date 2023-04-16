@@ -9,10 +9,11 @@ export interface Props {
 const { image, title, author, description } = Astro.props
 ---
 
-<article class="bg-white overflow-hidden rounded-md">
+<article
+  class="group bg-white hover:shadow-xl hover:shadow-dark-blue/5 cursor-pointer transition-all duration-300 overflow-hidden rounded-md">
   <figure class="relative w-full h-56 md:h-48 overflow-hidden">
     <img
-      class="object-cover w-full h-full min-h-max"
+      class="group-hover:scale-110 transition-transform duration-300 ease-in-out object-cover w-full h-full min-h-max"
       src={`./images/image-${image}.jpg`}
       alt={title}
       loading="lazy"
