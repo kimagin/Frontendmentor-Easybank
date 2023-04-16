@@ -10,10 +10,11 @@ const { image, title, description } = Astro.props
 
 <div class="flex flex-col items-center lg:items-start text-center lg:text-left">
   <img
-    width="74px"
+    width="74"
     class="image my-8"
     src={`./images/icon-${image}.svg`}
     alt={title}
+    loading="lazy"
   />
   <h3 class="title mb-6">{title}</h3>
   <p class="text text-[1.1rem] tracking-tight max-w-lg">
