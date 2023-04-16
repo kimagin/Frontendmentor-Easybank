@@ -24,10 +24,10 @@ body.stop {
 }
 
 h1 {
-  @apply text-5xl text-dark-blue leading-[3.4rem];
+  @apply text-[2.2rem] xxs:text-5xl text-dark-blue xxs:leading-[3.4rem] leading-[2.8rem];
 }
 h2 {
-  @apply text-4xl;
+  @apply text-[1.8rem] xxs:text-4xl;
 }
 h3 {
   @apply text-2xl;
